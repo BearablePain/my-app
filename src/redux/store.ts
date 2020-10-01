@@ -7,11 +7,11 @@ import { ArrayDataAllConfig } from '../interfaces';
 //  формирование хранилища в стор
 
 const initialStore: ArrayDataAllConfig = { data: [] };
-
+const middleware = [thunk, logger]
 const store = createStore(
   reducer,
   initialStore,
-  composeWithDevTools(applyMiddleware(thunk, logger)),
+  composeWithDevTools(applyMiddleware(...middleware)),
 );
 
 export default store;

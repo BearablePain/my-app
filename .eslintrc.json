@@ -1,31 +1,56 @@
 {
-    "env": {
-      "browser": true,
-      "es6": true
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "airbnb-base"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "airbnb-base"
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error",
+      {"variables": false
+      }
     ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "plugins": ["react", "@typescript-eslint"],
-    "rules": {
-      "react/jsx-filename-extension": [
-        1,
-        { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-      ]
-    }
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ""
+        ]
+      }
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          ".tsx",
+          ".ts"
+        ]
+      }
+    ]
   }
+}

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import useId from '../../../customHooks/useId';
-import thunkLoadData from '../../../redux/action.ts';
-import ListData from '../ListData.tsx';
+import useId from '../customHooks/useId';
+import ListData from '../components/ListData/ListData';
+import thunkLoadData from '../redux/action';
 
 const ListDataContainer = () => {
   const data = useSelector((state) => state.data);

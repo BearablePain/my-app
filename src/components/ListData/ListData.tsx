@@ -1,14 +1,10 @@
 import React from 'react';
-// import getId from './generatorId';
-import Card from './Card/Card.jsx';
+import Card from '../Card/Card.jsx';
 import { Container } from './ListStyle';
 import { DataProps } from '../../interfaces';
-
-const ListData = (props: DataProps) => {
-  console.log(props);
-
-  return (
-    <>
+const ListData = (props: DataProps) => (
+  <>
+    {props && (
       <Container>
         {props.data.map((el) => (
           <Card
@@ -19,8 +15,8 @@ const ListData = (props: DataProps) => {
           />
         ))}
       </Container>
-    </>
-  );
-};
+    )}
+  </>
+);
 
 export default ListData;
