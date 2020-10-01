@@ -17,9 +17,8 @@ export interface AllDataConfiguration extends DataBeginInterface {
   restrictions: [];
   chat_link: string;
   detalis?: Detalis[];
-  icon?: string
+  icon?: string;
 }
-
 
 export interface Detalis {
   type: string;
@@ -33,14 +32,13 @@ export interface Detalis {
 }
 
 export interface ArrayDataBeginConfig {
-  data: DataBeginInterface[]
+  data: DataBeginInterface[];
 }
 
 export interface ArrayDataAllConfig {
-  data: AllDataConfiguration[]
+  data: AllDataConfiguration[];
 }
 
-
 export interface DataProps extends ArrayDataAllConfig {
-  genId: () => void | string
+  genId: () => void | string;
 }

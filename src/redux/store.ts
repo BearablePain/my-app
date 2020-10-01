@@ -4,7 +4,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
 import { ArrayDataAllConfig } from '../interfaces';
-//  формирование хранилища в стор
+//  формирование хранилища
 
 const initialStore: ArrayDataAllConfig = { data: [] };
 const middleware = [thunk, logger];

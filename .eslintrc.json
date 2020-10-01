@@ -26,9 +26,21 @@
     "@typescript-eslint"
   ],
   "rules": {
-      "no-use-before-define": "off",
-      "@typescript-eslint/no-use-before-define": ["error",
-      {"variables": false
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "variables": false
       }
     ],
     "react/jsx-filename-extension": [
@@ -38,8 +50,7 @@
           ".js",
           ".jsx",
           ".ts",
-          ".tsx",
-          ""
+          ".tsx"
         ]
       }
     ],
@@ -48,7 +59,8 @@
       {
         "ignore": [
           ".tsx",
-          ".ts"
+          ".ts",
+          "never"
         ]
       }
     ]
