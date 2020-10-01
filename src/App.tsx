@@ -1,26 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ListDataContainer from './components/ListData/LastDataContainer/ListDataContainer.jsx';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// ts ругается на расширение файла (исправить позже)
+// @ts-ignore
+
+const App: React.FC = () => <ListDataContainer />;
 
 export default App;
