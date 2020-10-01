@@ -1,4 +1,4 @@
-import GET_DATA from './actionTypes';
+import GET_DATA from './actionTypes.ts';
 
 const reducer = (state, action) => {
   switch (action.type) {
